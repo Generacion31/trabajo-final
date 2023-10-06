@@ -1,11 +1,11 @@
 .body__nav {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 9vh;
   width: 100%;
   padding: 0.2em 0;
-  position: fixed;
   top: 0;
   background-color: var(--background-first-section);
   z-index: 3;

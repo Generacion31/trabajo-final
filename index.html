@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academlo store</title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="./src/assets/logo blanco.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./src/assets/logo_blanco.png" type="image/x-icon">
   <!-- meta, tarea para el grupo -->
 
   <!-- font family  -->
@@ -18,7 +18,9 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="./src/primary-styles/reset.css">
   <link rel="stylesheet" href="./src/components/nav/nav.css">
-
+  <link rel="stylesheet" href="./src/components/header/header.css">
+  <link rel="stylesheet" href="./src/primary-styles/body.css">
+  <link rel="stylesheet" href="./src/primary-styles/articleApi.css">
 
 </head>
 
@@ -26,6 +28,24 @@
   <nav id="nav" class="body__nav nav">
     <!-- Aqui insertamos el nav -->
   </nav>
+
+  <main class="body__main main">
+    <header id="header" class="main__header header">
+      <!-- Aqui insertamos el header -->
+    </header>
+
+    <section class="main__section section">
+
+      <article class="section__article--api article">
+        <h2 class="article__h2">Todos nuestros productos</h2>
+        <ul class="article__ul ul">
+          <!-- aca va el contenido de la API -->
+        </ul>
+      </article>
+
+    </section>
+  </main>
+
 
 
   <script type="module" src="./main.js"></script>
