@@ -6,9 +6,9 @@ function nav() {
     <ul class="nav__ul">
 
       <li class="nav__li">
-        <a class="nav__a" href="#home">
+       
           <img  class="nav__img" src="../../../src/assets/logo_nombre.png" alt="logo Academlo">
-        </a>
+   
       </li>
 
       <li class="nav__li">
@@ -17,6 +17,12 @@ function nav() {
 
     </ul>
   `
+  const navImg = document.querySelector('.nav__img')
+
+  navImg.addEventListener('click', function () {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" })
+  })
+
 }
 
 
