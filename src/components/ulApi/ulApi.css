@@ -15,10 +15,12 @@
   align-items: center;
   width: 230px;
   height: 380px;
+  transition: box-shadow 0.33s, transform 0.33s;
 }
 
 .ul__img {
   width: 90%;
+  transition: transform 0.33s;
 }
 
 .ul__div {
@@ -59,4 +61,14 @@
 .ul__h3 {
   font-weight: var(--font-weight-medium);
   align-self: flex-end;
+}
+
+.ul__li:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px);
+}
+
+.ul__li:hover .ul__img {
+  transform: translatex(5px);
 }
