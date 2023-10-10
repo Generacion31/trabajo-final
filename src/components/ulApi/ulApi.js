@@ -29,7 +29,7 @@ function ulApi() {
         li.addEventListener('click', () => {
           console.log(`Me has pillado con tu clic y doy id: ${product.id}`);
           localStorage.setItem('productModal', `${product.id}`)
-          window.location.href = '../../../detail.html'
+          window.location.href = `../../../detail.html?id=${product.id}`
         })
       }
 
