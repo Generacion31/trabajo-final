@@ -95,6 +95,12 @@
   transition: transform 0.33s;
 }
 
+.div__button--active {
+  background-color: var(--background-header);
+  color: var(--background-first-section);
+  border: none;
+}
+
 .div__button--sizes:hover {
   transform: scale(1.05);
   cursor: pointer;

@@ -1,3 +1,5 @@
+import localStorageCart from "./localStorageCart.js"
+
 function detail() {
 
   const params = window.location.search
@@ -40,7 +42,7 @@ function detail() {
               </div>
         
               <div class="ul__div--buttons div">
-                <button class="div__button--sizes"> S </button>
+                <button class="div__button--sizes "> S </button>
                 <button class="div__button--sizes"> M </button>
                 <button class="div__button--sizes"> L </button>
                 <button class="div__button--sizes"> XL </button>
@@ -59,6 +61,40 @@ function detail() {
           </figure>
           
           `
+          const divButtonSizes = document.querySelectorAll('.div__button--sizes')
+          //console.log(divButtonSizes); //6 elementos que tienen esa clase
+
+          let size = null
+
+          divButtonSizes.forEach((button) => {
+
+            button.addEventListener(('click'), function () {
+
+              divButtonSizes.forEach((btn) => {
+                btn.classList.remove('div__button--active')
+              })
+
+              button.classList.add('div__button--active')
+              size = button.textContent
+              console.log(size);
+
+            })
+
+          })
+
+          const ulButtonDiv = document.querySelector('.ul__button--div')
+
+          ulButtonDiv.addEventListener(('click'), () => {
+            localStorageCart(size)
+          })
+
+
+
+
+
+
+
+
         }
 
       }
