@@ -12,6 +12,12 @@
   background-color: var(--background-first-section);
   box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.1);
   padding: 5px 35px;
+  transform: translateX(800px);
+  transition: transform 0.5s;
+}
+
+.main__section--cartActive {
+  transform: translateX(0);
 }
 
 .main__section--cart>i {
