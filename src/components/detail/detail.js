@@ -86,8 +86,7 @@ function detail() {
 
           ulButtonDiv.addEventListener(('click'), () => {
             localStorageCart(size, divButtonSizes, productId, product.name, product.price, product.image)
-
-
+            size = null
           })
 
 
