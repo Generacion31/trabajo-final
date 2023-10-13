@@ -1,7 +1,10 @@
+import subTotal from "./subtotal.js"
+
 function cart() {
   const ul = document.getElementById('cart_list')
-
   const itemsCart = JSON.parse(localStorage.getItem('cart')) || []
+
+  subTotal()
 
   ul.innerHTML = ''
 
@@ -38,6 +41,43 @@ function cart() {
     `
 
     ul.appendChild(li)
+
+    const increment = li.querySelector('.increment')
+    const decrement = li.querySelector('.decrement')
+    const remove = li.querySelector('.remove')
+
+    increment.addEventListener('click', () => {
+      product.quantity++
+      localStorage.setItem('cart', JSON.stringify(itemsCart))
+      cart()
+    })
+
+    decrement.addEventListener('click', () => {
+      if (product.quantity > 0) product.quantity--
+
+      if (product.quantity === 0) {
+        const index = itemsCart.indexOf(product)
+        if (index !== -1) {
+          itemsCart.splice(index, 1)
+        }
+      }
+      localStorage.setItem('cart', JSON.stringify(itemsCart))
+      cart()
+    })
+
+
+    remove.addEventListener('click', () => {
+
+      const index = itemsCart.indexOf(product)
+      if (index !== -1) {
+        itemsCart.splice(index, 1)
+      }
+
+      localStorage.setItem('cart', JSON.stringify(itemsCart))
+      cart()
+    })
+
+
   }
 
 }
